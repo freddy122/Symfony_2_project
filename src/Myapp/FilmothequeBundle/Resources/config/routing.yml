@@ -1,0 +1,27 @@
+myapp_accueil:
+    pattern: /
+    defaults: { _controller: MyappFilmothequeBundle:Default:index}
+myapp_acteur_lister:
+    pattern: /acteur/lister
+    defaults: { _controller: MyappFilmothequeBundle:Acteur:lister}
+myapp_acteur_voir:
+    pattern: /acteur/voir/{id}
+    defaults: { _controller: MyappFilmothequeBundle:Acteur:voir}
+myapp_acteur_ajouter:
+    pattern: /acteur/ajouter
+    defaults: { _controller: MyappFilmothequeBundle:Acteur:ajouter}
+myapp_acteur_modifier:
+    pattern: /acteur/modifier/{id}
+    defaults: { _controller: MyappFilmothequeBundle:Acteur:modifier}
+myapp_acteur_supprimer:
+    pattern: /acteur/supprimer/{id}
+    defaults: { _controller: MyappFilmothequeBundle:Acteur:supprimer}
+myapp_film_lister:
+    pattern: /film/liste
+    defaults: { _controller:MyappFilmothequeBundle:Film:lister }
+myapp_film_voir:
+    pattern: /film/voir/{id}
+    defaults: { _controller: MyappFilmothequeBundle:Film:voir}
+myapp_choisir_langue:
+    pattern: /choisir-langue/{langue}
+    defaults: { _controller:MyappFilmothequeBundle:Default:choisirLangue}

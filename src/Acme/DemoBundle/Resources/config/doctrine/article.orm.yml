@@ -1,0 +1,22 @@
+Acme\DemoBundle\Entity\article:
+    type: entity
+    table: null
+    repositoryClass: Acme\DemoBundle\Entity\articleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nomArticle:
+            type: string
+            length: 255
+            column: nom_article
+        publication:
+            type: string
+            length: 255
+        commentaire:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

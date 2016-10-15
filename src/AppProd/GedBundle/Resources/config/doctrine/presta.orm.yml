@@ -1,0 +1,26 @@
+AppProd\GedBundle\Entity\presta:
+    type: entity
+    table: null
+    repositoryClass: AppProd\GedBundle\Entity\prestaRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        prestaId:
+            type: integer
+            column: presta_id
+        clientId:
+            type: integer
+            column: client_id
+        libellePresta:
+            type: string
+            length: 255
+            column: libelle_presta
+        nomPresta:
+            type: string
+            length: 255
+            column: nom_presta
+    lifecycleCallbacks: {  }

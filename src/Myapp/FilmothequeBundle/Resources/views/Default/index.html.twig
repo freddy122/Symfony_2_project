@@ -1,0 +1,15 @@
+{% extends 'MyappFilmothequeBundle::layout.html.twig' %}
+{% block title %}Page d'accueil{% endblock %}
+
+{% block content %}
+
+{# block content #}
+<!--h3>Top des acteurs les plus jeunes</h3-->
+	{# render (controller("MyappFilmothequeBundle:Acteur:top", {'max': 4})) #}
+
+<!--h3>Top films</h3-->
+{# render (controller("MyappFilmothequeBundle:Film:lister", {'max': 4})) #}
+{# endblock #}
+
+BIENVENUE SUR SYMFONY 2
+{% endblock %}

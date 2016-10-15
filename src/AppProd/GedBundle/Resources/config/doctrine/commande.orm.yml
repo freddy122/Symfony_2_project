@@ -1,0 +1,25 @@
+AppProd\GedBundle\Entity\commande:
+    type: entity
+    table: null
+    repositoryClass: AppProd\GedBundle\Entity\commandeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        commandeId:
+            type: string
+            length: 255
+            column: commande_id
+        prestaId:
+            type: integer
+            column: presta_id
+        dateReception:
+            type: date
+            column: date_reception
+        heureReception:
+            type: time
+            column: heure_reception
+    lifecycleCallbacks: {  }

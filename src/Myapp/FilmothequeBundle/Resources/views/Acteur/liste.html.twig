@@ -1,0 +1,54 @@
+<div class="page-header">
+	<h1>
+		Accueil
+		<small>
+			<i class="ace-icon fa fa-angle-double-right"></i>
+			Liste Acteur
+			{{"acteur.nom"|trans}}
+		</small>
+	</h1>
+</div>
+
+<div class="row">
+	<div class="col-xs-12">
+		<table id="dynamic-table" class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+
+					<th>Nom</th>
+					<th>Prénom</th>
+					<th>Date de naissance</th>
+
+					<th>Sexe</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+			{% for a in acteurs %}
+				<tr>
+					<td>{{ a.nom }}</td>
+					<td>{{ a.prenom }}</td>
+					<td>{{ a.dateNaissance|date('d/m/Y') }}</td>
+					<td>{{ a.sexe }}</td>
+					<td>
+						<div class="hidden-sm hidden-xs action-buttons">
+							<a class="blue" href="{{ path('myapp_acteur_voir',{'id':a.id})}}">
+								<i class="ace-icon fa fa-search-plus bigger-130"></i>
+							</a>
+
+							<a class="green" href="{{ path('myapp_acteur_modifier', { 'id': a.id }) }}">
+								<i class="ace-icon fa fa-pencil bigger-130"></i>
+							</a>
+
+							<a class="red" href="{{ path('myapp_acteur_supprimer', { 'id': a.id }) }}" onclick="return(confirm('Voulez vous supprimer'))">
+								<i class="ace-icon fa fa-trash-o bigger-130"></i>
+							</a>
+						</div>
+					</td>
+					
+				</tr>
+			{% endfor %}	
+			</tbody>									
+		</table>
+	</div>
+</div>

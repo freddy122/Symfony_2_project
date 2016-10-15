@@ -1,0 +1,7 @@
+parameters:
+#    myapp_utilisateur.example.class: Myapp\UtilisateurBundle\Example
+
+services:
+#    myapp_utilisateur.example:
+#        class: %myapp_utilisateur.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

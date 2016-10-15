@@ -1,0 +1,7 @@
+parameters:
+#    app_prod_ged.example.class: AppProd\GedBundle\Example
+
+services:
+#    app_prod_ged.example:
+#        class: %app_prod_ged.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

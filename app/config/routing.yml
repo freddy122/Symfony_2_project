@@ -1,0 +1,11 @@
+app_prod_ged:
+    resource: "@AppProdGedBundle/Resources/config/routing.yml"
+    prefix:   /
+
+myapp_filmotheque:
+    resource: "@MyappFilmothequeBundle/Resources/config/routing.yml"
+    prefix:   /myapps
+fos_user:
+    resource: "@MyappUtilisateurBundle/Resources/config/routing.yml"
+    prefix: /utilisateur	
+

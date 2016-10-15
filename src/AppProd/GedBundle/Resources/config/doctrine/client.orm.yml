@@ -1,0 +1,19 @@
+AppProd\GedBundle\Entity\client:
+    type: entity
+    table: null
+    repositoryClass: AppProd\GedBundle\Entity\clientRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        clientId:
+            type: integer
+            column: client_id
+        libelleClient:
+            type: string
+            length: 255
+            column: libelle_client
+    lifecycleCallbacks: {  }

@@ -1,0 +1,63 @@
+{% extends 'MyappFilmothequeBundle::layout.html.twig' %}
+{% block title %}Ajout acteur{% endblock %}
+
+{% block content %}
+<div class="page-header">
+	<h1>
+		Acteur
+		<small>
+			<i class="ace-icon fa fa-angle-double-right"></i>
+			Ajout acteur
+		</small>
+	</h1>
+</div>
+
+{% if message %}
+<p>{{ message }}</p>
+{% endif %}
+<div class="row">
+	<div class="col-xs-12">
+		<form action="" method="post" {{ form_enctype(form) }} class="form-horizontal" role="form">
+				<div class="form-group">					
+					{{ form_label(form.nom,'Nom',{'label_attr':{'class':'col-sm-3 control-label no-padding-right'}}) }}
+					<div class="col-sm-9">												
+						{{ form_widget(form.nom, {'attr':{'class':'col-xs-10 col-sm-5'}}) }}
+					</div>
+					
+				</div>
+			
+				<div class="form-group">					
+					{{ form_label(form.prenom,'Prénom',{'label_attr':{'class':'col-sm-3 control-label no-padding-right'}}) }}
+					<div class="col-sm-9">												
+						{{ form_widget(form.prenom, {'attr':{'class':'col-xs-10 col-sm-5'}}) }}
+					</div>					
+				</div>
+				
+				<div class="form-group">					
+					{{ form_label(form.sexe,'Sexe',{'label_attr':{'class':'col-sm-3 control-label no-padding-right'}}) }}
+					<div class="col-sm-9">												
+						{{ form_widget(form.sexe, {'attr':{'class':'col-xs-10 col-sm-5'}}) }}
+					</div>					
+				</div>
+				
+				<div class="form-group">					
+					{{ form_label(form.dateNaissance,'Date de naissance',{'label_attr':{'class':'col-sm-3 control-label no-padding-right'}}) }}
+					<div class="col-sm-9">												
+						{{ form_widget(form.dateNaissance) }}
+					</div>					
+				</div>
+				
+			{{ form_widget(form) }}
+			
+			
+				<div class="clearfix form-actions">
+					<div class="col-md-offset-3 col-md-9">
+						<input type="submit" value="Enregistrer" class="btn btn-primary"/>
+						<a class="btn btn-info" type="button" href="{{ path('myapp_acteur_lister') }}"><i class="ace-icon fa fa-exchange bigger-110"></i>Retour</a>
+					</div>
+				</div>
+		</form>
+	</div>
+</div>
+
+{% endblock %}
